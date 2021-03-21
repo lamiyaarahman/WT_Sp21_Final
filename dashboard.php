@@ -1,10 +1,13 @@
 <?php
-     if(isset($_COOKIE["username"])){
-		 
-		 header("Location:cookies.php")
-	 }
-
+    if(!isset($_COOKIE["username"])){
+        header("Location: Login.php");
+    }
 ?>
+
 <html>
-      <h1>WELCOME<?php echo $_COOKIE["username"];?></h1>
-</html>
+<head></head>
+<body>
+    <h1>Welcome <?php echo $_COOKIE["username"];?>
+    </h1>
+</body>
+</html> 
