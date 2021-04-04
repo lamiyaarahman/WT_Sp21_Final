@@ -1,29 +1,38 @@
-<?php include 'main_header.php';?>
+<?php include 'main_header.php';
 
+     require_once 'Controllers/logincontroller.php';
 
+?>
 <!--sign up starts -->
 <div class="center-login">
-	<h1 class="text text-center">Sign Up</h1>
-	<form class="form-horizontal form-material">
+
+	<h3 class="text text-center">Sign Up</h3>
+	
+	<form  action ="" method ="post" class="form-horizontal form-material">
+	
 		<div class="form-group">
-			<h4 class="text">Name</h4> 
-			<input type="text" class="form-control">
+		
+			<h5 class="text"><b>Name</b></h5> 
+			
+			<input type="text" name = "name" value ="<?php echo $name;?>" class="form-control"><span><?php echo $err_name;?></span>
 		</div>
 		<div class="form-group">
-			<h4 class="text">Username</h4> 
-			<input type="text" class="form-control">
+			<h5 class="text"><b>Username</b></h5> 
+			<input type="text" name ="username" value ="<?php echo $username;?>" class="form-control"><span><?php echo $err_username;?></span>
 		</div>
 		<div class="form-group">
-			<h4 class="text">Email</h4> 
-			<input type="text" class="form-control">
+			<h5 class="text"><b>Password</b></h5> 
+			<input type="password" name ="password" value ="<?php echo $password;?>" class="form-control"><span><?php echo $err_password;?></span>
 		</div>
 		<div class="form-group">
-			<h4 class="text">Password</h4> 
-			<input type="password" class="form-control">
+			<h5 class="text"><b>Email</b></h5> 
+			 
+			<input type="text" name ="email" value ="<?php echo $email;?>" class="form-control"><span><?php echo $err_email;?></span>
 		</div>
+		
 		<div class="form-group text-center">
 			
-			<input type="submit" class="btn btn-success" value="Sign Up" class="form-control">
+			<input type="submit" class="btn btn-success" name ="sign_up"value="Sign Up" class="form-control">
 		</div>
 </div>
 
